@@ -112,7 +112,7 @@ body {
 /* text footer in container form */
 .form-container .footer {
   place-self: center;
-  margin-block-start: 20px;
+  margin-block-start: 5rem;
   color: #959cb6;
   font-weight: 400;
   font-size: 0.8em;
