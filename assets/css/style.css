@@ -5,20 +5,18 @@
   margin: 0;
   box-sizing: border-box;
 }
-
-body {
-  width: 100%;
-  height: 100vh;
+a {
+  text-decoration: none;
 }
 
-.header {
+body {
+  height: 100vh;
   width: 100%;
-  height: 100%;
-  padding: 20px;
-  margin: auto;
 }
 
 .container {
+  min-width: 320px;
+  padding: 20px 25px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -27,10 +25,13 @@ body {
 /* image banner */
 .img-banner {
   width: 100%;
-  height: 180px;
+  /* max-width: 390px; */
+  height: 100%;
+  max-height: 180px;
+  overflow: hidden;
+  border-radius: 28px;
 }
 .img-content {
-  border-radius: 28px;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -40,6 +41,7 @@ body {
 .form-container {
   display: grid;
   gap: 8px;
+  /* max-width: 390px; */
 }
 .form-container .form-text {
   font-weight: 400;
@@ -79,7 +81,6 @@ body {
 }
 
 .form-content .forget-text {
-  text-decoration: none;
   font-weight: 400;
   line-height: 14px;
   place-self: end;
@@ -97,22 +98,22 @@ body {
 .form-content .btn-text {
   color: white;
   font-weight: 400;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
-.form-content .text-signup {
-  font-size: 1em;
-  padding-block-start: 10px;
-  place-self: center;
-}
 .form-content a {
   text-decoration: none;
   color: #1e4ae9;
 }
+.form-container .text-signup {
+  font-size: 1em;
+  padding-block-start: 10px;
+  place-self: center;
+}
 /* text footer in container form */
 .form-container .footer {
   place-self: center;
-  margin-block-start: 5rem;
+  margin-block-start: 3rem;
   color: #959cb6;
   font-weight: 400;
   font-size: 0.8em;
@@ -121,24 +122,26 @@ body {
 /* media query */
 @media only screen and (min-width: 768px) {
   .container {
-    display: flex;
     flex-direction: row-reverse;
   }
   .form-container {
-    width: 60%;
+    width: 50%;
     margin: auto;
     justify-content: center;
+    align-items: center;
   }
   .form-text .text-subtitle {
-    padding-block: 20px;
+    padding-block: 16px;
   }
   .form-container .footer {
-    padding-block-start: 20px;
+    padding-block-start: 16px;
     font-size: 0.9em;
   }
   /* image-banner */
   .img-banner {
     width: 40%;
+    max-width: 816px;
+    max-height: 1076px;
     height: 100%;
   }
 }
