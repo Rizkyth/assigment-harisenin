@@ -1,0 +1,228 @@
+/* RESET ROOT */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+/* popput  */
+.popout {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 200px;
+  top: -20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  scale: 0.2;
+  height: max-content;
+  padding-block: 20px;
+  border-radius: 10%;
+  background-color: rgb(235, 234, 234);
+  box-shadow: 0 2px 2px 0 rgb(197, 164, 164);
+  transition: 0.5s ease-in;
+  visibility: hidden;
+  z-index: 99;
+}
+
+.popout.active {
+  top: 50%;
+  scale: 1;
+  visibility: visible;
+}
+.popout ion-icon {
+  font-size: 50px;
+  background-color: white;
+  border-radius: 10%;
+}
+ion-icon.success {
+  color: green;
+}
+ion-icon.error {
+  color: red;
+}
+.popout p {
+  font-size: 1.2rem;
+  letter-spacing: -0.25px;
+}
+.popout .btn-popout {
+  cursor: pointer;
+  width: 50%;
+  padding-block: 4px;
+  font-weight: 500;
+  border: none;
+  background-color: aliceblue;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px 0 rgb(197, 164, 164);
+}
+
+.container {
+  min-width: 320px;
+  width: 100%;
+  height: 100%;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: auto;
+}
+/* image banner */
+.img-banner {
+  width: 100%;
+  /* max-width: 390px; */
+  height: 100%;
+  max-height: 180px;
+  overflow: hidden;
+  border-radius: 28px;
+}
+.img-content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+/* form */
+.form-container {
+  display: grid;
+  gap: 8px;
+  /* max-width: 390px; */
+}
+.form-container .form-text {
+  font-weight: 400;
+  padding-block-start: 0.5rem;
+}
+.form-container .text-content {
+  color: #0c1421;
+  font-size: 1.5rem;
+  margin-block: 8px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.form-container .text-subtitle {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 24px;
+  color: #313957;
+  padding-block-end: 8px;
+}
+/* form content */
+.form-content {
+  display: grid;
+  gap: 8px;
+}
+.form-field {
+  display: grid;
+  gap: 10px;
+}
+.form-field label {
+  color: #0c1421;
+  font-weight: 400;
+  line-height: 14px;
+}
+.form-field input {
+  background-color: #f3f7fb;
+  color: #8897ad;
+  height: 35px;
+  padding-inline: 10px;
+  border: 1px solid #d4d7e3;
+  border-radius: 8px;
+}
+.form-field input:focus {
+  color: black;
+  font-weight: 500;
+  outline: none;
+}
+
+.form-field.error input {
+  border: 2px solid red;
+}
+.form-field.success input {
+  border: 2px solid green;
+}
+
+.form-field.error p {
+  color: red;
+  letter-spacing: -0.25px;
+}
+.form-field.success p {
+  color: green;
+  letter-spacing: -0.25px;
+}
+.form-content .forget-text {
+  font-weight: 400;
+  line-height: 14px;
+  place-self: end;
+  padding-block: 6px;
+  color: #1e4ae9;
+}
+
+.form-content .btn {
+  cursor: pointer;
+  padding: 10px 12px;
+  background-color: #2e5266;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px 0 rgb(36, 36, 36);
+}
+.form-content .btn-text {
+  color: white;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.form-content a {
+  text-decoration: none;
+  color: #1e4ae9;
+}
+.form-container .text-signup {
+  font-size: 1em;
+  padding-block-start: 10px;
+  place-self: center;
+}
+/* text footer in container form */
+.form-container .footer {
+  place-self: center;
+  margin-block-start: 3rem;
+  color: #959cb6;
+  font-weight: 400;
+  font-size: 0.8em;
+}
+
+/* media query */
+@media only screen and (min-width: 768px) {
+  .container {
+    flex-direction: row-reverse;
+  }
+  .form-container {
+    width: 50%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-text .text-subtitle {
+    padding-block: 16px;
+  }
+  .form-container .footer {
+    padding-block-start: 16px;
+    font-size: 0.9em;
+  }
+  /* image-banner */
+  .img-banner {
+    width: 40%;
+    max-width: 816px;
+    max-height: 1076px;
+    height: 100%;
+  }
+}
