@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
+    <!-- popout -->
+    <div class="popout" id="popout">
+      <ion-icon name="checkmark"></ion-icon>
+      <p></p>
+      <button class="btn-popout" id="btn-popout">OK</button>
+    </div>
+
     <!-- container -->
     <section class="container">
       <!-- image banner -->
@@ -25,15 +32,21 @@
           </p>
         </div>
         <!-- form -->
-        <form class="form-content">
-          <label for="email">Email</label>
-          <input type="email" name="Email" placeholder="example@gmail.com" required />
-          <label for="email">Password</label>
-          <input type="password" name="password" placeholder="At least 8 character" required />
+        <form class="form-content" action="#" id="signup">
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email" placeholder="example@gmail.com" required />
+            <p id="email-text"></p>
+          </div>
+          <div class="form-field">
+            <label for="email">Password</label>
+            <input type="password" id="password" name="password" placeholder="At least 8 character" required />
+            <p id="email-text"></p>
+          </div>
           <!-- link forget password -->
           <a href="#" class="forget-text">Forget password?</a>
           <!-- BUTTOM SUBMIT -->
-          <button class="btn" form="SUBMIT">
+          <button id="btn-submit" class="btn" form="SUBMIT">
             <span class="btn-text">Sign In</span>
           </button>
         </form>
@@ -44,5 +57,11 @@
         </div>
       </div>
     </section>
+
+    <!-- link icon -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- link to java script -->
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
